@@ -8,7 +8,6 @@
 
 		<homebg>./assets/bg.png</homebg>
 		<listbg>./assets/bg-gl.png</listbg>
-		<!-- <gridbg>./assets/bg-glg.png</gridbg>	 -->
 
 	<!-- Menu colours - colours used by the main menus -->
 
@@ -32,6 +31,8 @@
 
 		<cgamelisttext>b3b3b3</cgamelisttext>	<!-- ## non-selected text ## -->
 		<cselectedtext>000000</cselectedtext>	<!-- ## selected text ## -->
+
+		<ctransparent>00000000</ctransparent>
 	
 	
 	</variables>

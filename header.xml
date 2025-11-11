@@ -1,9 +1,4 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<!-- 
-Theme: MinUArk
-Original author: Vidnez
-License: creative commons CC-BY-NC-SA
--->
 <theme>
   <formatVersion>7</formatVersion>
 
@@ -21,30 +16,17 @@ License: creative commons CC-BY-NC-SA
       <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
     </text>
 
-    <!-- <batteryIndicator name="batteryIndicator">
-         <pos>0.85 0.002</pos>
-         <size>0.06</size>
-         <color>${clockcolor}</color>
-         <itemSpacing>0.01</itemSpacing>
-         <full>./assets/battery=full.svg</full>
-         <at75>./assets/battery=75.svg</at75>
-         <at50>./assets/battery=50.svg</at50>
-         <at25>./assets/battery=25.svg</at25>
-         <empty>./assets/battery=empty.svg</empty>
-         <incharge>./assets/battery=charging.svg</incharge>
-       
-         </batteryIndicator> -->
   </view>
 
-  <!-- <view name="system">
+  <view name="system">
     <helpsystem name="help">
       <pos>-0.1 2</pos>
       <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
-	  <textColor>${clockcolor}</textColor>
-      <iconColor>${clockcolor}</iconColor>
+	  <textColor>${ctransparent}</textColor>
+      <iconColor>${ctransparent}</iconColor>
       <fontSize>0.025</fontSize>
     </helpsystem>
-  </view> -->
+  </view>
   
   <view name="basic, detailed, grid">
     <helpsystem name="help">
