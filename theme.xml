@@ -2,8 +2,31 @@
 <theme>
   <formatVersion>7</formatVersion>
 
-  <include name="ES Header">./header.xml</include>
-  <include name="Configs">./config.xml</include>
+  <view name="screen">
+    <text name="clock">
+      <origin>0 0.5</origin>
+      <pos>1 0.034</pos>
+      <size>0.3 .1</size>
+      <fontSize>0.026</fontSize>
+      <color>${clockcolor}</color>
+      <horizontalAlignment>center</horizontalAlignment>
+      <verticalAlignment>center</verticalAlignment>
+      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
+    </text>
+
+  </view>
+
+  <view name="basic, detailed, grid">
+    <helpsystem name="help">
+      <pos>-0.1 2</pos>
+      <textColor>${clockcolor}</textColor>
+      <iconColor>${clockcolor}</iconColor>
+      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
+      <fontSize>0.02</fontSize>
+    </helpsystem>
+  </view>
+
+  <include subset="Style" name="Original" displayName="Original">./options/colors/minui.xml</include>
 
   <view name="menu">
 
@@ -69,6 +92,39 @@
       <forceUppercase>0</forceUppercase>
       <fontSize>0.05</fontSize>
       <color>FFFFFF</color>
+    </text>
+
+    <helpsystem name="help">
+      <pos>-0.1 2</pos>
+      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
+      <textColor>${ctransparent}</textColor>
+      <iconColor>${ctransparent}</iconColor>
+      <fontSize>0.025</fontSize>
+    </helpsystem>
+
+    <carousel name="systemcarousel" extra="true">
+      <type>vertical</type>
+      <pos>0.08 0.15</pos>
+      <size>1 0.7</size>
+      <origin>0 0</origin>
+      <color>ffffff00</color>
+      <maxLogoCount>7</maxLogoCount>
+      <logoScale>1</logoScale>
+      <itemStacking>descending</itemStacking>
+      <logoSize>0.8 0.8</logoSize>
+      <logoPos>0 0</logoPos>
+      <fastScrolling>true</fastScrolling>
+    </carousel>
+
+    <text name="systemInfo">
+      <visible>false</visible>
+      <pos>-0.065 0.845</pos>
+      <size>1 0.25</size>
+      <alignment>center</alignment>
+      <backgroundColor>00000000</backgroundColor>
+      <color>${cinfotext}</color>
+      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
+      <fontSize>0.026</fontSize>
     </text>
 
   </view>
@@ -183,156 +239,6 @@
       <alignment>center</alignment>
       <fontSize>0.026</fontSize>
       <zIndex>2</zIndex>
-    </text>
-
-  </view>
-
-
-  <!-- <view name="grid">
-    <imagegrid name="gamegrid">
-      <systemNameSuffix>true</systemNameSuffix>
-      <pos>-0.01 0.067</pos>
-      <size>1 0.85</size>
-      <autoLayoutSelectedZoom>1</autoLayoutSelectedZoom>
-      <imageSource>image</imageSource>
-      <scrollDirection>vertical</scrollDirection>
-      <autoLayout>3 3</autoLayout>
-      <margin>0.00001 0.015</margin>
-      <padding>0.02 0.02 0 0</padding>
-      <animateSelection>false</animateSelection>
-      <maxlength>.5</maxlength>
-      <showVideoAtDelay>${pandelay}</showVideoAtDelay>
-      <effect>none</effect>
-    </imagegrid>
-
-    <gridtile name="default">
-      <backgroundColor>00000000</backgroundColor>
-      <selectionMode>image</selectionMode>
-    </gridtile>
-
-    <gridtile name="selected">
-      <backgroundCenterColor>${cselector}</backgroundCenterColor>
-      <backgroundEdgeColor>${cselector}</backgroundEdgeColor>
-      <imageColor>ffffff</imageColor>
-    </gridtile>
-
-    <text name="gridtile">
-      <color>ffffff</color>
-      <backgroundColor>ffffff00</backgroundColor>
-      <fontSize>0.025</fontSize>
-      <alignment>center</alignment>
-      <size>.05 0.24</size>
-      <visible>false</visible>
-    </text>
-
-    <text name="gridtile_selected">
-      <color>0e0e29</color>
-      <glowColor>ffffff</glowColor>
-      <glowSize>5</glowSize>
-      <visible>false</visible>
-    </text>
-
-    <image name="background" extra="true">
-      <origin>0 0</origin>
-      <pos>0 0</pos>
-      <size>1 1</size>
-      <path>${gridbg}</path>
-      <zIndex>1</zIndex>
-    </image>
-
-    <text name="system_name" extra="true">
-      <visible>true</visible>
-      <text>${system.fullName}</text>
-      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
-      <forceUppercase>0</forceUppercase>
-      <size>0.9 0.025</size>
-      <pos>-0.23 0.955</pos>
-      <color>${cinfotext}</color>
-      <alignment>center</alignment>
-      <fontSize>0.026</fontSize>
-      <zIndex>2</zIndex>
-    </text>
-
-    <text
-      name="md_lbl_genre, md_genre, md_lbl_rating, md_lbl_developer, md_lbl_publisher, md_publisher, md_lbl_lastplayed, md_lbl_playcount, md_playcount, md_lbl_releasedate, md_rating">
-      <visible>false</visible>
-    </text>
-
-    <text name="md_name">
-      <color>${cinfotext}</color>
-      <forceUppercase>0</forceUppercase>
-      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
-      <alignment>center</alignment>
-      <fontSize>0.026</fontSize>
-      <pos>0.037 0.02</pos>
-      <size>0.5 0.026</size>
-    </text>
-
-    <video name="md_video">
-      <pos>0.9 0.058</pos>
-      <maxSize>0.15 0.12</maxSize>
-      <origin>0.5 0.5</origin>
-      <default>./assets/no_signal.mp4</default>
-      <delay>2</delay>
-      <showSnapshotNoVideo>false</showSnapshotNoVideo>
-      <showSnapshotDelay>false</showSnapshotDelay>
-      <visible>false</visible>
-    </video>
-
-    <image name="gridtile.favorite">
-      <path>./assets/favorites.svg</path>
-      <pos>0.0 0</pos>
-      <maxSize>0.25 0.25</maxSize>
-      <origin>0 0</origin>
-      <color>ffffff80</color>
-    </image>
-
-    <image name="gridtile.favorite:selected">
-      <path>./assets/favorites.svg</path>
-      <color>ffffff</color>
-    </image>
-
-    <image name="gridtile.cheevos">
-      <path>./assets/cheevos.svg</path>
-      <pos>0 1</pos>
-      <maxSize>0.25 0.25</maxSize>
-      <origin>0 1</origin>
-      <color>ffffff80</color>
-    </image>
-
-    <image name="gridtile.cheevos:selected">
-      <path>./assets/cheevos.svg</path>
-      <color>ffffff</color>
-    </image>
-
-  </view> -->
-
-
-  <view name="system">
-
-    <carousel name="systemcarousel" extra="true">
-      <type>vertical</type>
-      <pos>0.08 0.15</pos>
-      <size>1 0.7</size>
-      <origin>0 0</origin>
-      <color>ffffff00</color>
-      <maxLogoCount>7</maxLogoCount>
-      <logoScale>1</logoScale>
-      <itemStacking>descending</itemStacking>
-      <logoSize>0.8 0.8</logoSize>
-      <logoPos>0 0</logoPos>
-      <fastScrolling>true</fastScrolling>
-    </carousel>
-
-    <text name="systemInfo">
-      <visible>false</visible>
-      <pos>-0.065 0.845</pos>
-      <size>1 0.25</size>
-      <alignment>center</alignment>
-      <backgroundColor>00000000</backgroundColor>
-      <color>${cinfotext}</color>
-      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
-      <fontSize>0.026</fontSize>
     </text>
 
   </view>

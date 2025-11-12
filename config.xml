@@ -1,7 +1,0 @@
-<theme>
-    
-    <formatVersion>4</formatVersion>
-
-    <include subset="Style" name="Original" displayName="Original">./options/colors/minui.xml</include>
-
-</theme>
