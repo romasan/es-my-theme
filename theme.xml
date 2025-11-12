@@ -2,48 +2,34 @@
 <theme>
   <formatVersion>7</formatVersion>
 
-  <view name="screen">
-    <text name="clock">
-      <origin>0 0.5</origin>
-      <pos>1 0.034</pos>
-      <size>0.3 .1</size>
-      <fontSize>0.026</fontSize>
-      <color>${clockcolor}</color>
-      <horizontalAlignment>center</horizontalAlignment>
-      <verticalAlignment>center</verticalAlignment>
-      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
-    </text>
-
-  </view>
-
   <view name="basic, detailed, grid">
     <helpsystem name="help">
       <pos>-0.1 2</pos>
       <textColor>${clockcolor}</textColor>
       <iconColor>${clockcolor}</iconColor>
-      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
+      <fontPath>./assets/QueensidesMedium-x30zV.otf</fontPath>
       <fontSize>0.02</fontSize>
     </helpsystem>
   </view>
 
-  <include subset="Style" name="Original" displayName="Original">./options/colors/minui.xml</include>
+  <include subset="Style" name="Original" displayName="Original">./colors.xml</include>
 
   <view name="menu">
 
     <menuText name="menutitle">
-      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
+      <fontPath>./assets/QueensidesMedium-x30zV.otf</fontPath>
       <fontSize>0.04</fontSize>
       <color>ffffff</color>
     </menuText>
 
     <menuText name="menufooter">
-      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
+      <fontPath>./assets/QueensidesMedium-x30zV.otf</fontPath>
       <fontSize>0.02</fontSize>
       <color>ffffff</color>
     </menuText>
 
     <menuText name="menutext">
-      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
+      <fontPath>./assets/QueensidesMedium-x30zV.otf</fontPath>
       <fontSize>0.035</fontSize>
       <color>ffffff90</color>
       <selectorColor>${cselector}</selectorColor>
@@ -58,7 +44,7 @@
     </menuTextEdit>
 
     <menuTextSmall name="menutextsmall">
-      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
+      <fontPath>./assets/QueensidesMedium-x30zV.otf</fontPath>
       <fontSize>0.02</fontSize>
       <color>ffffff</color>
     </menuTextSmall>
@@ -81,22 +67,30 @@
       <zIndex>0</zIndex>
     </image>
 
-    <image name="logo">
+    <!-- <image name="logo">
       <path>./art/default.svg</path>
       <path>./art/${system.theme}.svg</path>
-    </image>
+    </image> -->
 
     <text name="logoText">
       <selectorColor>ffffff</selectorColor>
-      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
-      <forceUppercase>0</forceUppercase>
+      <fontPath>./assets/QueensidesMedium-x30zV.otf</fontPath>
+      <forceUppercase>1</forceUppercase>
       <fontSize>0.05</fontSize>
-      <color>FFFFFF</color>
+      <color>ffffff</color>
+      <!-- <alignment>left</alignment>
+      <logoAlignment>left</logoAlignment>
+      <horizontalAlignment>left</horizontalAlignment> -->
+
+      <selectorImagePath>${selectortyped}</selectorImagePath>
+      <selectorOffsetY>-0.009</selectorOffsetY>
+      <selectorOffsetX>0.2</selectorOffsetX>
+      <selectorHeight>0.105</selectorHeight>
     </text>
 
     <helpsystem name="help">
       <pos>-0.1 2</pos>
-      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
+      <fontPath>./assets/QueensidesMedium-x30zV.otf</fontPath>
       <textColor>${ctransparent}</textColor>
       <iconColor>${ctransparent}</iconColor>
       <fontSize>0.025</fontSize>
@@ -104,16 +98,19 @@
 
     <carousel name="systemcarousel" extra="true">
       <type>vertical</type>
-      <pos>0.08 0.15</pos>
-      <size>1 0.7</size>
+      <pos>0.005 0.1</pos>
+      <size>1 0.951</size>
       <origin>0 0</origin>
       <color>ffffff00</color>
-      <maxLogoCount>7</maxLogoCount>
+      <maxLogoCount>10</maxLogoCount>
       <logoScale>1</logoScale>
       <itemStacking>descending</itemStacking>
       <logoSize>0.8 0.8</logoSize>
       <logoPos>0 0</logoPos>
       <fastScrolling>true</fastScrolling>
+      <alignment>left</alignment>
+      <logoAlignment>left</logoAlignment>
+      <horizontalAlignment>left</horizontalAlignment>
     </carousel>
 
     <text name="systemInfo">
@@ -123,9 +120,18 @@
       <alignment>center</alignment>
       <backgroundColor>00000000</backgroundColor>
       <color>${cinfotext}</color>
-      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
+      <fontPath>./assets/QueensidesMedium-x30zV.otf</fontPath>
       <fontSize>0.026</fontSize>
     </text>
+
+    <image name="poster" extra="true">
+        <path>./assets/posters/${system.theme}.jpg</path>
+        <path>./assets/posters/${system.theme}.png</path>
+        <tile>false</tile>
+        <origin>1 0</origin>
+        <pos>1 0</pos>
+        <size>0 1</size>
+    </image>
 
   </view>
 
@@ -138,12 +144,15 @@
       <selectedColor>${cselectedtext}</selectedColor>
       <primaryColor>ffffff90</primaryColor>
       <secondaryColor>ffffff90</secondaryColor>
-      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
+      <fontPath>./assets/QueensidesMedium-x30zV.otf</fontPath>
       <backgroundCornerSize>1 1</backgroundCornerSize>
       <padding>1 1</padding>
       <fontSize>0.049</fontSize>
-      <pos>0.051 0.167</pos>
-      <size>0.6 0.7</size>
+      <!-- <pos>0.051 0.167</pos>
+      <size>0.6 0.7</size> -->
+      <pos>0.054 0.167</pos>
+      <size>0.9 0.7</size>
+
       <alignment>left</alignment>
       <itemsBeforeCenter>5</itemsBeforeCenter>
       <horizontalMargin>0.03</horizontalMargin>
@@ -158,7 +167,7 @@
     <text name="system_name" extra="true">
       <visible>true</visible>
       <text>${system.fullName}</text>
-      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
+      <fontPath>./assets/QueensidesMedium-x30zV.otf</fontPath>
       <forceUppercase>0</forceUppercase>
       <size>0.9 0.025</size>
       <pos>-0.23 0.955</pos>
@@ -205,7 +214,7 @@
       <selectedColor>${cselectedtext}</selectedColor>
       <primaryColor>ffffff90</primaryColor>
       <secondaryColor>ffffff90</secondaryColor>
-      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
+      <fontPath>./assets/QueensidesMedium-x30zV.otf</fontPath>
       <fontSize>0.049</fontSize>
       <pos>0.054 0.167</pos>
       <size>0.9 0.7</size>
@@ -231,7 +240,7 @@
     <text name="system_name" extra="true">
       <visible>true</visible>
       <text>${system.fullName}</text>
-      <fontPath>./assets/BPreplayBold-unhinted.otf</fontPath>
+      <fontPath>./assets/QueensidesMedium-x30zV.otf</fontPath>
       <forceUppercase>0</forceUppercase>
       <size>0.9 0.025</size>
       <pos>-0.23 0.955</pos>
