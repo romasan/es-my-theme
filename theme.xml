@@ -5,10 +5,11 @@
   <view name="basic, detailed, grid">
     <helpsystem name="help">
       <pos>-0.1 2</pos>
-      <textColor>${clockcolor}</textColor>
-      <iconColor>${clockcolor}</iconColor>
+      <textColor>${ctransparent}</textColor>
+      <iconColor>${ctransparent}</iconColor>
       <fontPath>./assets/QueensidesMedium-x30zV.otf</fontPath>
       <fontSize>0.02</fontSize>
+      <color>00000000</color>
     </helpsystem>
   </view>
 
@@ -30,7 +31,7 @@
 
     <menuText name="menutext">
       <fontPath>./assets/QueensidesMedium-x30zV.otf</fontPath>
-      <fontSize>0.035</fontSize>
+      <fontSize>0.037</fontSize>
       <color>ffffff90</color>
       <selectorColor>${cselector}</selectorColor>
       <selectorColorEnd>${cselector}</selectorColorEnd>
@@ -78,9 +79,6 @@
       <forceUppercase>1</forceUppercase>
       <fontSize>0.05</fontSize>
       <color>ffffff</color>
-      <!-- <alignment>left</alignment>
-      <logoAlignment>left</logoAlignment>
-      <horizontalAlignment>left</horizontalAlignment> -->
 
       <selectorImagePath>${selectortyped}</selectorImagePath>
       <selectorOffsetY>-0.009</selectorOffsetY>
@@ -98,8 +96,8 @@
 
     <carousel name="systemcarousel" extra="true">
       <type>vertical</type>
-      <pos>0.005 0.1</pos>
-      <size>1 0.951</size>
+      <pos>0.005 0.08</pos>
+      <size>1 0.92</size>
       <origin>0 0</origin>
       <color>ffffff00</color>
       <maxLogoCount>10</maxLogoCount>
@@ -135,33 +133,24 @@
 
   </view>
 
-
   <view name="detailed">
 
     <textlist name="gamelist">
+       <primaryColor>ffffff90</primaryColor>
+      <secondaryColor>ffffff90</secondaryColor>
+      <fontPath>./assets/QueensidesMedium-x30zV.otf</fontPath>
+      <fontSize>0.049</fontSize>
+      <pos>0 0.08</pos>
+      <size>1 0.92</size>
+      <alignment>left</alignment>
+      <horizontalMargin>0.0025</horizontalMargin>
+      <origin>0 0</origin>
       <selectorColor>${cselector}</selectorColor>
       <selectorColorEnd>${cselector}</selectorColorEnd>
       <selectedColor>${cselectedtext}</selectedColor>
-      <primaryColor>ffffff90</primaryColor>
-      <secondaryColor>ffffff90</secondaryColor>
-      <fontPath>./assets/QueensidesMedium-x30zV.otf</fontPath>
-      <backgroundCornerSize>1 1</backgroundCornerSize>
-      <padding>1 1</padding>
-      <fontSize>0.049</fontSize>
-      <!-- <pos>0.051 0.167</pos>
-      <size>0.6 0.7</size> -->
-      <pos>0.054 0.167</pos>
-      <size>0.9 0.7</size>
-
-      <alignment>left</alignment>
-      <itemsBeforeCenter>5</itemsBeforeCenter>
-      <horizontalMargin>0.03</horizontalMargin>
-      <origin>0 0</origin>
-      <lineSpacing>1.8</lineSpacing>
-      <selectorImagePath>${selectortyped}</selectorImagePath>
-      <selectorOffsetY>-0.009</selectorOffsetY>
-      <selectorOffsetX>0.2</selectorOffsetX>
-      <selectorHeight>0.105</selectorHeight>
+      <selectorOffsetY>-0.01</selectorOffsetY>
+      <selectorOffsetX>0</selectorOffsetX>
+      <selectorHeight>0.1</selectorHeight>
     </textlist>
 
     <text name="system_name" extra="true">
@@ -169,14 +158,13 @@
       <text>${system.fullName}</text>
       <fontPath>./assets/QueensidesMedium-x30zV.otf</fontPath>
       <forceUppercase>0</forceUppercase>
-      <size>0.9 0.025</size>
-      <pos>-0.23 0.955</pos>
+      <size>0.8 0.08</size>
+      <pos>0.1 0</pos>
       <color>${cinfotext}</color>
       <alignment>center</alignment>
-      <fontSize>0.026</fontSize>
+      <fontSize>0.04</fontSize>
       <zIndex>3</zIndex>
     </text>
-
 
     <image name="background" extra="true">
       <origin>0 0</origin>
@@ -206,26 +194,25 @@
 
   </view>
 
-
   <view name="basic">
     <textlist name="gamelist">
-      <selectorColor>${cselector}</selectorColor>
-      <selectorColorEnd>${cselector}</selectorColorEnd>
-      <selectedColor>${cselectedtext}</selectedColor>
       <primaryColor>ffffff90</primaryColor>
       <secondaryColor>ffffff90</secondaryColor>
       <fontPath>./assets/QueensidesMedium-x30zV.otf</fontPath>
       <fontSize>0.049</fontSize>
-      <pos>0.054 0.167</pos>
-      <size>0.9 0.7</size>
+      <pos>0 0.08</pos>
+      <size>1 0.92</size>
       <alignment>left</alignment>
-      <horizontalMargin>0.03</horizontalMargin>
+      <horizontalMargin>0.0025</horizontalMargin>
       <origin>0 0</origin>
-      <lineSpacing>1.8</lineSpacing>
-      <selectorImagePath>${selectortypeb}</selectorImagePath>
-      <selectorOffsetY>-0.027</selectorOffsetY>
+      <selectorColor>${cselector}</selectorColor>
+      <selectorColorEnd>${cselector}</selectorColorEnd>
+      <selectedColor>${cselectedtext}</selectedColor>
+      <selectorOffsetY>-0.01</selectorOffsetY>
       <selectorOffsetX>0</selectorOffsetX>
-      <selectorHeight>0.141</selectorHeight>
+      <selectorHeight>0.1</selectorHeight>
+      <!-- <lineSpacing>1.8</lineSpacing> -->
+      <!-- <selectorImagePath>${selectortypeb}</selectorImagePath> -->
     </textlist>
 
     <image name="background" extra="true">
@@ -236,18 +223,17 @@
       <zIndex>1</zIndex>
     </image>
 
-
     <text name="system_name" extra="true">
       <visible>true</visible>
       <text>${system.fullName}</text>
       <fontPath>./assets/QueensidesMedium-x30zV.otf</fontPath>
       <forceUppercase>0</forceUppercase>
-      <size>0.9 0.025</size>
-      <pos>-0.23 0.955</pos>
+      <size>0.8 0.08</size>
+      <pos>0.1 0</pos>
       <color>${cinfotext}</color>
       <alignment>center</alignment>
-      <fontSize>0.026</fontSize>
-      <zIndex>2</zIndex>
+      <fontSize>0.04</fontSize>
+      <zIndex>3</zIndex>
     </text>
 
   </view>

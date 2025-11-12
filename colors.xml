@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <theme>
 	<formatVersion>7</formatVersion>
+
 	<variables>
 
 		<!-- backgrounds -->
@@ -15,7 +16,7 @@
 
 		<!-- Selector highlight on menus and gamelist -->
 
-		<cselector>ffffff</cselector>  <!-- ## main color for selector bar on menus and gamelist ## -->
+		<cselector>ffffff7f</cselector>  <!-- ## main color for selector bar on menus and gamelist ## -->
 
 		<!-- Selector type -->
 		<!-- <selectortypeb>./assets/selector_bar_legacy.png</selectortypeb> -->
@@ -24,10 +25,8 @@
 
 		<!-- System view colour settings for text etc -->
 
-		<cinfotext>000000</cinfotext>	<!--##
-		info text color ## -->
-		<clockcolor>ffffff90</clockcolor> <!--##
-		clock and battery color -->
+		<cinfotext>ffffff90</cinfotext> <!-- ## info text color ## -->
+		<clockcolor>ffffff90</clockcolor> <!-- ## clock and battery color -->
 
 		<!-- gamelists -->
 
@@ -35,7 +34,6 @@
 		<cselectedtext>000000</cselectedtext>	<!-- ## selected text ## -->
 
 		<ctransparent>00000000</ctransparent>
-
 
 	</variables>
 </theme>
