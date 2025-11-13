@@ -2,7 +2,7 @@
 <theme>
   <formatVersion>7</formatVersion>
 
-  <view name="basic, detailed, grid">
+  <view name="screen, system, basic, detailed, grid">
     <helpsystem name="help">
       <pos>-0.1 2</pos>
       <textColor>${ctransparent}</textColor>
@@ -11,6 +11,20 @@
       <fontSize>0.02</fontSize>
       <color>00000000</color>
     </helpsystem>
+
+    <text name="clock">
+      <color>ffffff90</color>
+      <fontSize>0.035</fontSize>
+      <pos>0.906 0.005</pos>
+      <size>0.09 0.058</size>
+      <alignment>right</alignment>
+      <verticalAlignment>center</verticalAlignment>
+    </text>
+
+    <batteryIndicator name="batteryIndicator">
+      <pos>0.002 0.005</pos>
+      <color>FFFFFF90</color>
+    </batteryIndicator>
   </view>
 
   <include subset="Style" name="Original" displayName="Original">./colors.xml</include>
@@ -79,25 +93,18 @@
       <forceUppercase>1</forceUppercase>
       <fontSize>0.05</fontSize>
       <color>ffffff</color>
-
       <selectorImagePath>${selectortyped}</selectorImagePath>
       <selectorOffsetY>-0.009</selectorOffsetY>
       <selectorOffsetX>0.2</selectorOffsetX>
       <selectorHeight>0.105</selectorHeight>
+      <textHorizontalScrolling>1</textHorizontalScrolling>
+      <textRelativeScale>0.5</textRelativeScale>
     </text>
-
-    <helpsystem name="help">
-      <pos>-0.1 2</pos>
-      <fontPath>./assets/QueensidesMedium-x30zV.otf</fontPath>
-      <textColor>${ctransparent}</textColor>
-      <iconColor>${ctransparent}</iconColor>
-      <fontSize>0.025</fontSize>
-    </helpsystem>
 
     <carousel name="systemcarousel" extra="true">
       <type>vertical</type>
       <pos>0.005 0.08</pos>
-      <size>1 0.92</size>
+      <size>0.99 0.92</size>
       <origin>0 0</origin>
       <color>ffffff00</color>
       <maxLogoCount>10</maxLogoCount>
@@ -109,26 +116,29 @@
       <alignment>left</alignment>
       <logoAlignment>left</logoAlignment>
       <horizontalAlignment>left</horizontalAlignment>
+      <textHorizontalScrolling>1</textHorizontalScrolling>
     </carousel>
 
     <text name="systemInfo">
-      <visible>false</visible>
-      <pos>-0.065 0.845</pos>
-      <size>1 0.25</size>
+      <fontPath>./assets/QueensidesMedium-x30zV.otf</fontPath>
       <alignment>center</alignment>
       <backgroundColor>00000000</backgroundColor>
-      <color>${cinfotext}</color>
-      <fontPath>./assets/QueensidesMedium-x30zV.otf</fontPath>
-      <fontSize>0.026</fontSize>
+      <forceUppercase>1</forceUppercase>
+      <color>ffffff90</color>
+      <origin>0 0</origin>
+      <size>0.8 0.08</size>
+      <pos>0.1 0</pos>
+      <fontSize>0.04</fontSize>
+
     </text>
 
     <image name="poster" extra="true">
-        <path>./assets/posters/${system.theme}.jpg</path>
-        <path>./assets/posters/${system.theme}.png</path>
-        <tile>false</tile>
-        <origin>1 0</origin>
-        <pos>1 0</pos>
-        <size>0 1</size>
+      <path>./assets/posters/${system.theme}.jpg</path>
+      <path>./assets/posters/${system.theme}.png</path>
+      <tile>false</tile>
+      <origin>1 0</origin>
+      <pos>1 0</pos>
+      <size>0 1</size>
     </image>
 
   </view>
@@ -136,10 +146,10 @@
   <view name="detailed">
 
     <textlist name="gamelist">
-       <primaryColor>ffffff90</primaryColor>
+      <primaryColor>ffffff90</primaryColor>
       <secondaryColor>ffffff90</secondaryColor>
       <fontPath>./assets/QueensidesMedium-x30zV.otf</fontPath>
-      <fontSize>0.049</fontSize>
+      <fontSize>0.035</fontSize>
       <pos>0 0.08</pos>
       <size>1 0.92</size>
       <alignment>left</alignment>
@@ -148,16 +158,16 @@
       <selectorColor>${cselector}</selectorColor>
       <selectorColorEnd>${cselector}</selectorColorEnd>
       <selectedColor>${cselectedtext}</selectedColor>
-      <selectorOffsetY>-0.01</selectorOffsetY>
+      <selectorOffsetY>-0.0035</selectorOffsetY>
       <selectorOffsetX>0</selectorOffsetX>
-      <selectorHeight>0.1</selectorHeight>
+      <selectorHeight>0.07</selectorHeight>
     </textlist>
 
     <text name="system_name" extra="true">
       <visible>true</visible>
       <text>${system.fullName}</text>
       <fontPath>./assets/QueensidesMedium-x30zV.otf</fontPath>
-      <forceUppercase>0</forceUppercase>
+      <forceUppercase>1</forceUppercase>
       <size>0.8 0.08</size>
       <pos>0.1 0</pos>
       <color>${cinfotext}</color>
@@ -199,7 +209,7 @@
       <primaryColor>ffffff90</primaryColor>
       <secondaryColor>ffffff90</secondaryColor>
       <fontPath>./assets/QueensidesMedium-x30zV.otf</fontPath>
-      <fontSize>0.049</fontSize>
+      <fontSize>0.035</fontSize>
       <pos>0 0.08</pos>
       <size>1 0.92</size>
       <alignment>left</alignment>
@@ -208,9 +218,9 @@
       <selectorColor>${cselector}</selectorColor>
       <selectorColorEnd>${cselector}</selectorColorEnd>
       <selectedColor>${cselectedtext}</selectedColor>
-      <selectorOffsetY>-0.01</selectorOffsetY>
+      <selectorOffsetY>-0.0035</selectorOffsetY>
       <selectorOffsetX>0</selectorOffsetX>
-      <selectorHeight>0.1</selectorHeight>
+      <selectorHeight>0.07</selectorHeight>
       <!-- <lineSpacing>1.8</lineSpacing> -->
       <!-- <selectorImagePath>${selectortypeb}</selectorImagePath> -->
     </textlist>
@@ -227,13 +237,13 @@
       <visible>true</visible>
       <text>${system.fullName}</text>
       <fontPath>./assets/QueensidesMedium-x30zV.otf</fontPath>
-      <forceUppercase>0</forceUppercase>
+      <forceUppercase>1</forceUppercase>
       <size>0.8 0.08</size>
       <pos>0.1 0</pos>
       <color>${cinfotext}</color>
       <alignment>center</alignment>
       <fontSize>0.04</fontSize>
-      <zIndex>3</zIndex>
+      <!-- <zIndex>3</zIndex> -->
     </text>
 
   </view>
