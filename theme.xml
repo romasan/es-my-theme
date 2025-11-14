@@ -14,7 +14,7 @@
 
     <text name="clock">
       <color>ffffff90</color>
-      <fontSize>0.035</fontSize>
+      <fontSize>0.038</fontSize>
       <pos>0.906 0.005</pos>
       <size>0.09 0.058</size>
       <alignment>right</alignment>
@@ -23,7 +23,8 @@
 
     <batteryIndicator name="batteryIndicator">
       <pos>0.002 0.005</pos>
-      <color>FFFFFF90</color>
+      <color>ffffff90</color>
+      <fontPath>./assets/QueensidesMedium-x30zV.otf</fontPath>
     </batteryIndicator>
   </view>
 
@@ -97,8 +98,6 @@
       <selectorOffsetY>-0.009</selectorOffsetY>
       <selectorOffsetX>0.2</selectorOffsetX>
       <selectorHeight>0.105</selectorHeight>
-      <textHorizontalScrolling>1</textHorizontalScrolling>
-      <textRelativeScale>0.5</textRelativeScale>
     </text>
 
     <carousel name="systemcarousel" extra="true">
@@ -243,7 +242,6 @@
       <color>${cinfotext}</color>
       <alignment>center</alignment>
       <fontSize>0.04</fontSize>
-      <!-- <zIndex>3</zIndex> -->
     </text>
 
   </view>
